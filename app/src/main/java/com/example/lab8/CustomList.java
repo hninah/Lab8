@@ -54,6 +54,11 @@ public class CustomList extends ArrayAdapter<City> {
     }
 
     public void hasCity(City city){
+        if (cities.contains(city)){
+            return "Belongs in list";
+        } else{
+            return "Does not belong in list";
+        }
     }
 
 }
