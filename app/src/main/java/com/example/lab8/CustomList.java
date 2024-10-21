@@ -53,7 +53,7 @@ public class CustomList extends ArrayAdapter<City> {
         cities.add(city);
     }
 
-    public void hasCity(City city){
+    public String hasCity(City city){
         if (cities.contains(city)){
             return "Belongs in list";
         } else{
