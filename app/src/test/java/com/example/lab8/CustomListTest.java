@@ -35,11 +35,14 @@ public class CustomListTest {
     }
 
     @Test
-    public void hasCityTest(){
-        list = MockCityList();
+    void testHasCity(){
+        CityList cityList = mockCityList();
+        assertEquals(1, cityList.getCities().size());
         City city = new City("Cambridge", "Ontario");
-        list.addCity(city);
-        assertEquals("Belongs in list", list.hasCity(city));
+        cityList.add(city);
+        assertEquals("Belongs in list", cityList.hasCity(city));
+        City notCity = new City("Charlottetown", "Prince Edward Island");
+        assertEquals("Does not belong in list", cityList.hasCity(notCity));
     }
 
 }
