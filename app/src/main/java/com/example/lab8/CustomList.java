@@ -60,5 +60,7 @@ public class CustomList extends ArrayAdapter<City> {
             return "Does not belong in list";
         }
     }
+    public void delete(City city){
+    }
 
 }
